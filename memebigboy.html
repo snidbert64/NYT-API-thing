@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+
+            var ajaxURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json"
+            
+            ajaxURL += '?' + $.param({
+                'api-key': "b9f91d369ff59547cd47b931d8cbc56b:0:74623931",
+                // 'q': "trump",
+                // 'begin_date': "20000101",
+                // 'end_date': "20141231",
+                // 'sort': "newest",
+                // 'page': 0
+            });
+
+            $.ajax({
+                URL : ajaxURL
+            }).then(function(response){
+                console.log(response)
+            });
+        </script>
+    </body>
+</html>
